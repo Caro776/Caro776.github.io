@@ -71,7 +71,7 @@ tei-p{
 }
 
 tei-role{
-    display: list-item;
+    display: inline;
     font-size: 30px;
     font-weight: 500;
     font-family: 'Cookie';
