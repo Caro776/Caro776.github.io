@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/nivaca/hamleodd/refs/heads/main/tei_sp.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/nivaca/hamleodd/refs/heads/main/tei_sp.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title><persName>Hamlet</persName></title>
+        <author>William Shakespeare</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>Creado por Carolina Moreno
+          <l>para el curso "Herramientas digitales para humanistas" (2025-20)</l>
+        </p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>
+          <l>Original en inglés tomado de:
+          <ref target="https://internetshakespeare.uvic.ca/doc/Ham_Q2/scene/2.1/index.html"/></l>
+          texto en español traducido por Carolina Moreno.
+        </p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <div type="DramatisPersonae">
+        <head>The Persons Represented</head>
+        <castList>
+          <castItem xml:id="hamlet">
+            <role>Hamlet</role>
+            <roleDesc>Prince of Denmark</roleDesc>
+          </castItem>
+          <castItem xml:id="ghost">
+            <role>Ghost</role>
+            <roleDesc>of Hamlet’s father, the late King Hamlet of Denmark</roleDesc>
+          </castItem>
+          <castItem xml:id="claudius">
+            <role>King Claudius </role>
+            <roleDesc>of Denmark, brother of the late King</roleDesc>
+          </castItem>
+          <castItem xml:id="gertrude">
+            <role>Queen Gertrude</role>
+            <roleDesc>Hamlet’s mother and his father’s widow, now married to King Claudius</roleDesc>
+          </castItem>
+          <castItem xml:id="polonius">
+            <role>Polonius</role>
+            <roleDesc>King Claudius' councillor </roleDesc>
+          </castItem>
+          <castItem xml:id="laertes">
+            <role>Laertes</role>
+            <roleDesc>Polonius' son</roleDesc>
+          </castItem>
+          <castItem xml:id="ophelia">
+            <role>Ophelia</role>
+            <roleDesc>Polonius' daughter</roleDesc>
+          </castItem>
+          <castItem xml:id="reynaldo">
+            <role>Reynaldo</role>
+            <roleDesc>Polonius' man</roleDesc>
+          </castItem>
+          <castItem xml:id="followers">
+            <role>Followers</role>
+            <roleDesc>of Laertes</roleDesc>
+          </castItem>
+          <castItem xml:id="horatio">
+            <role>Horatio</role>
+            <roleDesc>Hamlet's friend and fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="rosencrantz">
+            <role>Rosencrantz</role>
+            <roleDesc>fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="guildenstern">
+            <role>Guildenstern</role>
+            <roleDesc>fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="voltemand">
+            <role>Voltemand</role>
+            <roleDesc>Danish ambassador to Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="cornelius">
+            <role>Cornelius</role>
+            <roleDesc>Danish ambassador to Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="barnardo">
+            <role>Barnardo</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="francisco">
+            <role>Francisco</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="marcelus">
+            <role>Marcelus</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="osric">
+            <role>Osric</role>
+            <roleDesc>a courtier</roleDesc>
+          </castItem>
+          <castGroup xml:id="players">
+            <roleDesc>Players</roleDesc>
+            <castItem xml:id="prologue">
+              <role>Prologue</role>
+            </castItem>
+            <castItem xml:id="playerking">
+              <role>Player King</role>
+            </castItem>
+            <castItem xml:id="playerqueen">
+              <role>Player Queen</role>
+            </castItem>
+            <castItem xml:id="lucianus">
+              <role>Lucianus</role>
+            </castItem>
+          </castGroup>
+          <castItem xml:id="gravedigger">
+            <role>Gravedigger</role>
+            <roleDesc>a clown</roleDesc>
+          </castItem>
+          <castItem xml:id="secondman">
+            <role>Second man</role>
+            <roleDesc>another clown</roleDesc>
+          </castItem>
+          <castItem xml:id="priest">
+            <role>Priest</role>
+          </castItem>
+          <castItem xml:id="lords">
+            <role>Lords</role>
+          </castItem>
+          <castItem xml:id="gentlemen">
+            <role>Gentlemen</role>
+          </castItem>
+          <castItem xml:id="messengers">
+            <role>Messengers</role>
+          </castItem>
+          <castItem xml:id="sailors">
+            <role>Sailors</role>
+          </castItem>
+          <castItem xml:id="fortinbras">
+            <role>Fortinbras</role>
+            <roleDesc>Prince of Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="capitan">
+            <role>Capitan</role>
+            <roleDesc>in Norwegian army</roleDesc>
+          </castItem>
+          <castItem xml:id="ambassadors">
+            <role>Ambassadors</role>
+            <roleDesc>from England</roleDesc>
+          </castItem>
+          <castItem xml:id="attendants">
+            <role>Attendants</role>
+          </castItem>
+          <castItem xml:id="courtiers">
+            <role>Courtiers</role>
+          </castItem>
+          <castItem xml:id="trumpets">
+            <role>Trumpets</role>
+          </castItem>
+          <castItem xml:id="kettledrums">
+            <role>Kettledrums</role>
+          </castItem>
+          <castItem xml:id="drums">
+            <role>Drums</role>
+          </castItem>
+          <castItem xml:id="officers">
+            <role>Officers</role>
+          </castItem>
+          <castItem xml:id="norw_soldiers">
+            <role>Norwegian soldiers</role>
+          </castItem>
+        </castList>
+      </div>
+    </front>
+    <body>
+      <div n="2" type="acto">
+        <div n="1" type="escena">
+          <head>
+            <supplied>2.1</supplied>
+          </head>
+          
+          <stage xml:lang="eng" xml:id="o6l6kipyij_eng" corresp="#o6l6kipyij_spa">
+            Enter old Polonius, 
+            <app>
+              <lem>with his man</lem>
+              <rdg wit="#f1" type="variation-absent"/>
+            </app>
+            <supplied>Reynaldo</supplied> 
+            <app>
+              <lem>or two.</lem>
+              <rdg wit="#f1" type="varation-absent"/>
+            </app>
+          </stage>
+
+          <stage xml:lang="spa" xml:id="o6l6kipyij_spa" corresp="#o6l6kipyij_eng">
+            Entra el viejo Polonio,<supplied>Reynaldo</supplied> o dos.
+          </stage>
+          
+          <sp who= "#polonius" xml:lang="eng" xml:id="y0uyexbmhi_eng" corresp="#y0uyexbmhi_spa">
+            <speaker>Polonius</speaker>
+            <l>Give him 
+              <app>
+                <lem>this</lem>
+                <rdg wit="#f1" type="variation-substance">his</rdg>
+              </app> 
+              money, and these notes, 
+              <app>
+                <lem>Reynaldo,</lem>
+                <rdg wit="#f1" type="variation-substance">Reynoldo</rdg>
+              </app>
+            </l>
+          </sp>
+          <sp who= "#polonius" xml:lang="spa" xml:id="y0uyexbmhi_spa" corresp="#y0uyexbmhi_eng">
+              <speaker>Polonio</speaker>
+              <l>Dele este dinero y estas notas, Reynaldo.</l>
+          </sp>
+            
+          <stage xml:lang="eng" xml:id="av40ocrxfb_eng" corresp="#av40ocrxfb_spa">
+            <app>
+              <lem>He gives money and papers.</lem>
+              <rdg wit="#f1" type="varation-absent"/>
+             </app>
+          </stage>
+          <stage xml:lang="spa" xml:id="av40ocrxfb_spa" corresp="#av40ocrxfb_eng">
+            Él le da el dinero y los papeles.
+          </stage>
+            
+          <sp who="#reynaldo" xml:lang="eng" xml:id="pxl24a3pfx_eng" corresp="#pxl24a3pfx_spa">
+            <speaker>Reynaldo</speaker>
+              <l>I will, my lord.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="pxl24a3pfx_spa" corresp="#pxl24a3pfx_eng">
+            <speaker>Reynaldo</speaker>
+            <l>Lo haré, mi señor.</l>
+          </sp>
+            
+          <sp who="#polonius" xml:lang="eng" xml:id="qc5wpsnnm6_eng" corresp="#qc5wpsnnm6_spa">
+            <speaker>Polonius</speaker>
+            <l>You shall do marv'lous wisely, good
+              <app>
+                <lem>Reynaldo,</lem>
+                <rdg wit="#f1" type="variation-substance">Reynoldo,</rdg>
+              </app>
+            </l>
+            <l>Before you visit him, 
+              <app>
+                <lem>to</lem>
+                <rdg wit="#f1" type="variation-substance"> you</rdg>
+              </app>  
+              make inquire
+            </l>
+            <l>Of his behavior.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="qc5wpsnnm6_spa" corresp="#qc5wpsnnm6_eng">
+            <speaker>Polonio</speaker>
+            <l>Obrarás con suma prudencia, buen Reynaldo,</l>
+            <l>antes de visitarlo, al indagar</l>
+            <l>sobre su conducta.</l>
+          </sp>
+              
+          <sp who="#reynaldo" xml:lang="eng" xml:id="accv7mxnj2_eng" corresp="#accv7mxnj2_spa">
+            <speaker>Reynaldo</speaker>
+            <l>My lord, I did intend it.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="accv7mxnj2_spa" corresp="#accv7mxnj2_eng">
+            <speaker>Reynaldo</speaker>
+            <l>Mi señor, eso era lo que tenía pensado.</l>
+          </sp>
+              
+          <sp who="#polonius" xml:lang="eng" xml:id="ld3o0km1wb_eng" corresp="#ld3o0km1wb_spa">
+            <speaker>Polonius</speaker>
+            <l>Marry, well said, very well said. Look you, sir,</l>
+            <l>Inquire me first what Danskers are in Paris,</l>
+            <l>And how, and who, what means, and where they keep,</l>
+            <l>What company, at what expense; and finding</l>
+            <l>By this encompassment and drift of question</l>
+            <l>That they do know my son, come you more nearer</l>
+            <l>Than your particular demands will touch it;</l>
+            <l>Take you, as 'twere, some distant knowledge of him,</l>
+            <l>As thus: "I know his father, and his friends,</l>
+            <l>And in part him." Do you mark this, 
+              <app>
+                <lem>Reynaldo?</lem>
+                <rdg wit="#f1" type="variation-substance">Reynoldo?</rdg>
+              </app>
+            ?</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="ld3o0km1wb_spa" corresp="#ld3o0km1wb_eng">
+            <speaker>Polonio</speaker>
+              <l>Bien dicho, muy bien dicho, en verdad. Mire usted, señor,</l>
+              <l>averigüe primero qué clase de daneses hay en París,</l>
+              <l>y cómo, y quiénes son, con qué medios viven, y dónde se alojan,</l>
+              <l>con qué compañía andan, y en qué gastos incurren; y al descubrir,</l>
+              <l>por esta ronda de preguntas y este rodeo,</l>
+              <l>que conocen a mi hijo, acérquese usted más</l>
+              <l>de lo que sus preguntas directas podrían lograr.</l>
+              <l>Hágase, por decirlo así, pasar por alguien que tiene un conocimiento distante de él,</l>
+              <l>como si dijera:"Conozco a su padre y a sus amigos,</l>
+              <l>y en parte a él."¿Lo entiende, Reynaldo?</l>
+          </sp>
+                  
+          <sp who="#reynaldo" xml:lang="eng" xml:id="dmtq0aosih_eng" corresp="#dmtq0aosih_spa">
+            <speaker>Reynaldo</speaker>
+               <l>
+                <app>
+                   <lem>Ay,</lem>
+                   <rdg wit="#f1" type="variation-substance">I</rdg>
+                </app> 
+               very well, my lord.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="dmtq0aosih_spa" corresp="#dmtq0aosih_eng">
+            <speaker>Reynaldo</speaker>
+              <l>Sí, muy bien, mi señor.</l>
+          </sp>
+                    
+          <sp who="#polonius" xml:lang="eng" xml:id="kx9y87jxs1_eng" corresp="#kx9y87jxs1_spa">
+            <speaker>Polonius</speaker>
+              <l>"And in part him. But, you may say, "not well,</l>
+              <l>But if't be he I mean, he's very wild,</l>
+              <l>Addicted so and so," and there put on him</l>
+              <l>What forgeries you please--marry, none so rank</l>
+              <l>As may dishonor him, take heed of that,</l>
+              <l>But, sir, such wanton, wild, and usual slips</l>
+              <l>As are companions noted and most known</l>
+              <l>To youth and liberty.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="kx9y87jxs1_spa" corresp="#kx9y87jxs1_eng">
+            <speaker>Polonio</speaker>
+              <l>"Y en parte él. Pero", usted podrá decir, "no muy bien</l>
+              <l>pero si se trata de él, es muy salvaje</l>
+              <l>aficionado a esto y aquello; y ahí échale encima</l>
+              <l>las invenciones que quieras --pero nada tan grave</l>
+              <l>que pueda deshonrarlo, ten cuidado con eso.</l>
+              <l>Sino, señor, esos deslices desenfrenados, salvajes y habituales,</l>
+              <l>que son los más comunes compañeros</l>
+              <l>de la juventud y la libertad.</l>
+          </sp>
+                    
+          <sp who="#reynaldo" xml:lang="eng" xml:id="j2k0b8pcik_eng" corresp="#j2k0b8pcik_spa">
+            <speaker>Reynaldo</speaker>
+              <l> As gaming, my lord.
+              </l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="j2k0b8pcik_spa" corresp="#j2k0b8pcik_eng">
+            <speaker>Reynaldo</speaker>
+               <l>Como el juego, mi señor.</l>
+          </sp>
+                    
+          <sp who="#polonius" xml:lang="eng" xml:id="uvi95bntrp_eng" corresp="#uvi95bntrp_spa">
+            <speaker>Polonius</speaker>
+              <l>
+                <app>
+                  <lem>Ay,</lem>
+                  <rdg wit="#f1" type="variation-substance">I</rdg>
+                </app>  
+                or drinking, fencing, swearing,</l>
+               <l>Quarreling, drabbing--you may go so far.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="uvi95bntrp_spa" corresp="#uvi95bntrp_eng">
+           <speaker>Polonio</speaker>
+            <l>O bien beber, esgrimir, maldecir,</l>
+            <l>discutir, mujerzuelas--hasta ahí puedes llegar.</l>
+          </sp>
+
+          <sp who="#reynaldo" xml:lang="eng" xml:id="t8yv62o1o1_eng" corresp="#t8yv62o1o1_spa">
+            <speaker>Reynaldo</speaker>
+              <l>My lord, that would dishonor him.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="t8yv62o1o1_spa" corresp="#t8yv62o1o1_eng">
+            <speaker>Reynaldo</speaker>
+              <l>Mi señor, eso lo deshonraría.</l>
+          </sp>
+                      
+          <sp who="#polonius" xml:lang="eng" xml:id="araiolrrxx_eng" corresp="#araiolrrxx_spa">
+           <speaker>Polonius</speaker>
+             <l>Faith,
+              <app>
+                <lem n="Faith"></lem>
+                <rdg wit="#f1" type="variation-present">no</rdg>
+              </app> 
+            as you may season it in the charge.</l>
+            <l>You must not put another scandal on him</l>
+            <l>That he is open to incontinency;</l>
+            <l>That's not my meaning. But breathe his faults so quaintly</l>
+            <l>That they may seem the taints of liberty,</l>
+            <l>The flash and outbreak of a fiery mind,</l>
+            <l>A savageness in unreclaimèd blood,</l>
+            <l>Of general assault.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="araiolrrxx_spa" corresp="#araiolrrxx_eng">
+            <speaker>Polonio</speaker>
+              <l>Ciertamente, según como lo sazones en la acusación.</l>
+              <l>No debes atribuirle otro escándalo</l>
+              <l>como si fuese dado a la lujuria;</l>
+              <l>esa no es mi intención. Pero expón sus faltas con tal delicadeza,</l>
+              <l>que parezcan manchas de libertad,</l>
+              <l>el destello y el estallido de una mente ardiente,,</l>
+              <l>la fiereza de una sangre aún indómita,</l>
+              <l>propia de la condición general.</l>
+          </sp>
+                        
+          <sp who="#reynaldo" xml:lang="eng" xml:id="wmzsgr3sp2_eng" corresp="#wmzsgr3sp2_spa">
+            <speaker>Reynaldo</speaker>
+              <l>But, my good lord--</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="wmzsgr3sp2_spa" corresp="#wmzsgr3sp2_eng">
+            <speaker>Reynaldo</speaker>
+              <l>Pero, mi buen señor--</l>
+          </sp>
+                        
+          <sp who="#polonius" xml:lang="eng" xml:id="twhy04iujh_eng" corresp="#twhy04iujh_spa">
+            <speaker>Polonius</speaker>
+              <l>Wherefore should you do this?</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="twhy04iujh_spa" corresp="#twhy04iujh_eng">
+            <speaker>Polonio</speaker>
+              <l>¿Por qué habrías de hacer esto?</l>
+          </sp>
+                        
+          <sp who="#reynaldo" xml:lang="eng" xml:id="ytjdh7vtdb_eng" corresp="#ytjdh7vtdb_spa">
+            <speaker>Reynaldo</speaker>
+              <l>
+                <app>
+                  <lem>Ay,</lem>
+                  <rdg wit="#f1" type="variation-substance">I</rdg>
+                </app> 
+              my lord, I would know that.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="ytjdh7vtdb_spa" corresp="#ytjdh7vtdb_eng">
+            <speaker>Reynaldo</speaker>
+              <l>En verdad, mi señor, me gustaría saberlo.</l>
+          </sp>
+                          
+          <sp who="#polonius" xml:lang="eng" xml:id="i5ztuiih70_eng" corresp="#i5ztuiih70_spa">
+            <speaker>Polonius</speaker>
+              <l>Marry sir, here's my drift,</l>
+              <l>And I believe it is a fetch of 
+                <app>
+                  <lem>wit</lem>
+                  <rdg wit="#f1" type="variation-substance">warrant</rdg>
+                </app>
+             </l>
+              <l>You laying these slight sallies on my son</l>
+              <l>As 'twere a thing a little soiled with working,</l>
+              <l>Mark you, your party in converse, him you would sound,</l>
+              <l>Having ever seen in the prenominate crimes</l>
+              <l>The youth you breathe of guilty, be assured</l>
+              <l>He closes with you in this consequence:</l>
+              <l>"Good sir" (or so), or "friend," or "gentleman,"</l>
+              <l>According to the phrase,
+                <app>
+                  <lem>or</lem>
+                    <rdg wit="#f1" type="variation-substance">and</rdg>
+                </app> 
+              the addition</l>
+              <l>Of man and country.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="i5ztuiih70_spa" corresp="#i5ztuiih70_eng">
+            <speaker>Polonio</speaker>
+              <l>Pues bien, señor, he aquí mi idea,</l>
+              <l>y creo que es una muestra de ingenio.</l>
+              <l>Tú, atribuyendo estos ligeros deslices a mi hijo,</l>
+              <l>como si fuese cosa un tanto manchada por la costumbre,</l>
+              <l>fíjate bien, tu interlocutor, al que deseas sondear,</l>
+              <l>habiendo visto alguna vez en los delitos ya nombrados</l>
+              <l>culpable al joven de quien hablas, ten por seguro</l>
+              <l>que coincidirá contigo en esta conclusión:</l>
+              <l>"Buen señor" (o algo así), o "amigo", o "caballero"</l>
+              <l>según la frase, o el título</l>
+              <l>propio de su condición y de su patria.</l>
+          </sp>
+                            
+          <sp who="#reynaldo" xml:lang="eng" xml:id="k0h7kzovdq_eng" corresp="#k0h7kzovdq_spa">
+            <speaker>Reynaldo</speaker>
+              <l>Very good, my lord.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="k0h7kzovdq_spa" corresp="#k0h7kzovdq_eng">
+            <speaker>Reynaldo</speaker>
+              <l>Muy bien, mi señor.</l>
+          </sp>
+                            
+          <sp who="#polonius" xml:lang="eng" xml:id="z8vkzgu2c9_eng" corresp="#z8vkzgu2c9_spa">
+            <speaker>Polonius</speaker>
+              <l>And then, sir, does 
+                <app>
+                  <lem>'a</lem>
+                  <rdg wit="#f1" type="variation-substance">he</rdg>
+                </app> 
+              this' 
+                <app>
+                  <lem>'a</lem>
+                  <rdg wit="#f1">he</rdg>
+                </app> 
+              does--what was I about to say?</l>
+              <l>
+                <app>
+                  <lem>By the mass,</lem>
+                  <rdg wit="#f1" type="varation-absent"/>
+                </app>
+              I was about to say something.</l>
+              <l>Where did I leave?</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="z8vkzgu2c9_spa" corresp="#z8vkzgu2c9_eng">
+            <speaker>Polonio</speaker>
+              <l>Y entonces, señor, él hace esto, él hace--¿qué iba a decir?</l>
+              <l>¡Por Dios!, estaba por decir algo.</l>
+              <l>¿En qué me quedé?</l>
+          </sp>
+                              
+          <sp who="#reynaldo" xml:lang="eng" xml:id="gn4mtk10oq_eng" corresp="#gn4mtk10oq_spa">
+            <speaker>Reynaldo</speaker>
+              <l>At "closes in the consequence."</l>
+                <app>
+                  <lem n="consequence"></lem>
+                  <rdg wit="#f1" type="variation-present">At friend, or so, and Gentelman</rdg>
+                </app>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="gn4mtk10oq_spa" corresp="#gn4mtk10oq_eng">
+            <speaker>Reynaldo</speaker>
+              <l>En lo de "coincidirá contigo en esta conclusión"</l>
+          </sp>
+                              
+          <sp who="#polonius" xml:lang="eng" xml:id="a5cyumc36o_eng" corresp="#a5cyumc36o_spa">
+            <speaker>Polonius</speaker>
+              <l>At "closes in the consequence." 
+                <app>
+                  <lem>Ay,</lem>
+                  <rdg wit="#f1" type="variation-substance">I</rdg>
+                </app> 
+              marry,</l>
+              <l>He closes thus: "I know the gentleman,</l>
+              <l>I saw him yesterday"--or th'other day,</l>
+              <l>Or then, or then--"with such or such, and as you say,</l>
+              <l>There was 
+                <app>
+                  <lem>'a</lem>
+                  <rdg wit="#f1" type="variation-substance">he</rdg>
+                </app>
+              gaming there, or took in's rouse,</l>
+              <l>There falling out at tennis," or perchance</l>
+              <l>"I saw him enter such a house of 
+                <app>
+                  <lem>sale."</lem>
+                  <rdg wit="#f1" type="variation-substance">saile</rdg>
+                </app>
+              </l>
+              <l>Videlicet, a brothel, or so forth. See you now,</l>
+              <l>Your bait of falsehood take this
+                <app>
+                  <lem>carp</lem>
+                  <rdg wit="#f1" type="variation-substance">Cape</rdg>
+                </app>
+              of truth,</l>
+              <l>And thus do we of wisdom and of reach,</l>
+              <l>With windlasses and with assays of bias,</l>
+              <l>By indirections find directions out;</l>
+              <l>So by my former lecture and advice</l>
+              <l>Shall you my son. You have me, have you not?</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="a5cyumc36o_spa" corresp="#a5cyumc36o_eng">
+            <speaker>Polonio</speaker>
+              <l>En lo de "coincidirá contigo en esta conclusión". Ay, en verdad,</l>
+              <l>así remata: "conozco a ese caballero,</l>
+              <l>lo vi ayer"--o anteayer,</l>
+              <l>o en tal ocasión--"con fulano o zutano: y como dices,</l>
+              <l>estaba allí jugando, o se entregó a la bebida,</l>
+              <l>o peleando en una partida de tenis"; o tal vez:</l>
+              <l>"Lo vi entrar en cierta casa de trato,"</l>
+              <l>es decir, un burdel, o algo por el estilo." ¿Lo ves ahora?</l>
+              <l>Con tu cebo de falsedad atrapas esta carpa de verdad;</l>
+              <l>y así hacemos, con astucia y buen alcance,</l>
+              <l>con rodeos y tanteos de sesgo,</l>
+              <l>por desvíos descubrimos la dirección justa.</l>
+              <l>Así, siguiendo mi instrucción y consejo,</l>
+              <l>vigilarás a mi hijo. ¿Me entiendes, no es cierto?</l>
+          </sp>
+                                    
+          <sp who="#reynaldo" xml:lang="eng" xml:id="a6ip5y2vmr_eng" corresp="#a6ip5y2vmr_spa">
+            <speaker>Reynaldo</speaker>
+              <l>My lord, I have.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="a6ip5y2vmr_spa" corresp="#a6ip5y2vmr_eng">
+            <speaker>Reynaldo</speaker>
+              <l>Sí, mi señor, lo comprendo..</l>
+          </sp>
+                                    
+          <sp who="#polonius" xml:lang="eng" xml:id="t6x3x5w9d2_eng" corresp="#t6x3x5w9d2_spa">
+            <speaker>Polonius</speaker>
+              <l>God buy ye, fare ye well.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="t6x3x5w9d2_spa" corresp="#t6x3x5w9d2_eng">
+            <speaker>Polonius</speaker>
+              <l>Dios te guarde, que te vaya bien.</l>
+          </sp>
+                                    
+          <sp who="#reynaldo" xml:lang="eng" xml:id="mf0x2ewdfn__eng" corresp="#mf0x2ewdfn__spa">
+            <speaker>Reynaldo</speaker>
+              <l>Good my lord.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="mf0x2ewdfn_spa" corresp="#mf0x2ewdfn_eng">
+            <speaker>Reynaldo</speaker>
+              <l>Como ordene, mi señor.</l>
+          </sp>
+                                    
+          <sp who="#polonius" xml:lang="eng" xml:id="xobkqldvfv_eng" corresp="#xobkqldvfv_spa">
+            <speaker>Polonius</speaker>
+              <l>Observe his inclination in yourself.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="xobkqldvfv_spa" corresp="#xobkqldvfv_eng">
+            <speaker>Polonio</speaker>
+              <l>Observa por ti mismo cuál es su inclinación.</l>
+          </sp>
+                                    
+          <sp who="#reynaldo" xml:lang="eng" xml:id="fepho6gagv_eng" corresp="#fepho6gagv_spa">
+            <speaker>Reynaldo</speaker>
+              <l>I shall, my lord.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="fepho6gagv_spa" corresp="#fepho6gagv_eng">
+            <speaker>Reynaldo</speaker>
+            <l>Eso haré, mi señor.</l>
+          </sp>
+                                    
+          <sp who="#polonius" xml:lang="eng" xml:id="dy63ftotgt_eng" corresp="#dy63ftotgt_spa">
+            <speaker>Polonius</speaker>
+              <l>And let him ply his music.</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="dy63ftotgt_spa" corresp="#dy63ftotgt_eng">
+            <speaker>Polonio</speaker>
+              <l>Y déjalo que toque su propia musica.</l>
+          </sp>
+                                    
+          <sp who="#reynaldo" xml:lang="eng" xml:id="k6787xekfp_eng" corresp="#k6787xekfp_spa">
+            <speaker>Reynaldo</speaker>
+              <l>Well, my lord.</l>
+          </sp>
+          <sp who="#reynaldo" xml:lang="spa" xml:id="k6787xekfp_spa" corresp="#k6787xekfp_eng">
+            <speaker>Reynaldo</speaker>
+              <l>De acuerdo, mi señor.</l>
+          </sp>
+                                    
+          <stage xml:lang="eng" xml:id="a0ylqktwnf_eng" corresp="#a0ylqktwnf_spa">
+            Exit 
+              <app>
+                <lem>Reynaldo.</lem>
+                <rdg wit="#f1" type="varation-absent"/>
+              </app>
+          </stage>
+          <stage xml:lang="spa" xml:id="a0ylqktwnf_spa" corresp="#a0ylqktwnf_eng">
+            Sale Reynaldo.
+          </stage>
+                                    
+          <stage xml:lang="eng" xml:id="gljd4k4cmz_eng" corresp="#gljd4k4cmz_spa">
+            Enter Ophelia.
+          </stage>
+          <stage xml:lang="spa" xml:id="gljd4k4cmz_spa" corresp="#gljd4k4cmz_eng">
+            Entra Ofelia.
+          </stage>
+                                    
+          <sp who="#polonius" xml:lang="eng" xml:id="f4bj8szh5v_eng" corresp="#f4bj8szh5v_spa">
+            <speaker>Polonius</speaker>
+              <l>Farewell.--How now, Ophelia, what's the matter?</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="f4bj8szh5v_spa" corresp="#f4bj8szh5v_eng">
+            <speaker>Polonius</speaker>
+              <l>Adiós. --Pero, ¿qué pasa, Ofelia?, ¿qué ocurre?</l>
+          </sp>
+                                    
+          <sp who="#ophelia" xml:lang="eng" xml:id="qz8hkevtrp_eng" corresp="#qz8hkevtrp_spa">
+            <speaker>Ophelia</speaker>
+              <l>
+                <app>
+                  <lem>Oh,</lem>
+                  <rdg wit="#f1" type="variation-substance">Alas</rdg>
+                </app>
+              my lord, my lord, I have been so affrighted!</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="qz8hkevtrp_spa" corresp="#qz8hkevtrp_eng">
+            <speaker>Ofelia</speaker>
+              <l>¡Ay, señor, señor mío, he quedado tan aterrada!</l>
+          </sp>
+                                      
+          <sp who="#polonius" xml:lang="eng" xml:id="p4996l8ngu_eng" corresp="#p4996l8ngu_spa">
+            <speaker>Polonius</speaker>
+              <l>With what, i'th' name of 
+                <app>
+                  <lem>god</lem>
+                  <rdg wit="#f1" type="variation-substance">Heauen</rdg>
+                </app>
+              ?</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="p4996l8ngu_spa" corresp="#p4996l8ngu_eng">
+            <speaker>Polonio</speaker>
+              <l>¿Qué ha pasado, por Dios santo?</l>
+          </sp>
+                                        
+          <sp who="#ophelia" xml:lang="eng" xml:id="dmtdf08tpu_eng" corresp="#dmtdf08tpu_spa">
+            <speaker>Ophelia</speaker>
+            <l>My lord, as I was sewing in my 
+              <app>
+                <lem>closet,</lem>
+                <rdg wit="#f1" type="variation-substance">Chamber</rdg>
+              </app>
+            </l>
+            <l>Lord Hamlet, with his doublet all unbraced,</l>
+            <l>No hat upon his head, his stockings fouled,</l>
+            <l>Ungartered, and down-gyvèd to his ankle,</l>
+            <l>Pale as his shirt, his knees knocking each other,</l>
+            <l>And with a look so piteous in purport</l>
+            <l>As if he had been loosèd out of hell</l>
+            <l>To speak of horrors, he comes before me.</l>
+          </sp>
+          <sp who="#ophelia" xml:lang="spa" xml:id="dmtdf08tpu_spa" corresp="#dmtdf08tpu_eng">
+            <speaker>Ofelia</speaker>
+              <l>Señor mío, mientras yo cosía en mi aposento,</l>
+              <l>entró el lord Hamlet, con el jubón desabrochado,</l>
+              <l>sin sombrero en la cabeza, las medias sucias,</l>
+              <l>sin ligas y caídas hasta los tobillos,</l>
+              <l>pálido como su camisa, con las rodillas chocando entre sí,</l>
+              <l>y con un gesto tan lastimero en su semblante,</l>
+              <l>como si lo hubieran soltado del mismo infierno</l>
+              <l>para hablar de horrores, se presenta ante mí.</l>
+          </sp>
+                                        
+          <sp who="#polonius" xml:lang="eng" xml:id="cuai8rzajo_eng" corresp="#cuai8rzajo_spa">
+            <speaker>Polonius</speaker>
+              <l>Mad for thy love?</l>
+          </sp>
+          <sp who="#polonius" xml:lang="spa" xml:id="cuai8rzajo_spa" corresp="#cuai8rzajo_eng">
+            <speaker>Polonio</speaker>
+              <l>¿Loco por tu amor?</l>
+          </sp>
+                                        
+          <sp who="#ophelia" xml:lang="eng" xml:id="u9g5ziju04_eng" corresp="#u9g5ziju04_spa">
+            <speaker>Ophelia</speaker>
+              <l>My lord, I do not know,</l>
+              <l>But truly I do fear it.</l>
+            </sp>
+            <sp who="#ophelia" xml:lang="spa" xml:id="u9g5ziju04_spa" corresp="#u9g5ziju04_eng">
+              <speaker>Ofelia</speaker>
+                <l>Mi señor, no lo sé,</l>
+                <l>pero en verdad lo temo.</l>
+            </sp>
+                                        
+            <sp who="#polonius" xml:lang="eng" xml:id="jwrq85j4bx_eng" corresp="#jwrq85j4bx_spa">
+              <speaker>Polonius</speaker>
+                <l>What said he?</l>
+            </sp>
+            <sp who="#polonius" xml:lang="spa" xml:id="jwrq85j4bx_spa" corresp="#jwrq85j4bx_eng">
+              <speaker>Polonio</speaker>
+                <l>¿Y qué fue lo que dijo?</l>
+            </sp>
+                                        
+            <sp who="#ophelia" xml:lang="eng" xml:id="mzywsucqag_eng" corresp="#mzywsucqag_spa">
+              <speaker>Ophelia</speaker>
+                <l>He took me by the wrist, and held me hard.</l>
+                <l>Then goes he to the length of all his arm,</l>
+                <l>And with his other hand thus o'er his brow</l>
+                <l>He falls to such perusal of my face</l>
+                <l>As
+                  <app>
+                    <lem>'a</lem>
+                    <rdg wit="#f1" type="variation-substance">he</rdg>
+                  </app> 
+                would draw it. Long stayed he so.</l>
+                <l>At last, a little shaking of mine arm,</l>
+                <l>And thrice his head thus waving up and down,</l>
+                <l>He raised a sigh so piteous and profound</l>
+                <l>As it did seem to shatter all his bulk</l>
+                <l>And end his being. That done, he lets me go,</l>
+                <l>And with his head over his shoulder turned</l>
+                <l>He seemed to find his way without his eyes,</l>
+                <l>For out o' doors he went without their helps,</l>
+                <l>And to the last bended their light on me.</l>
+            </sp>
+            <sp who="#ophelia" xml:lang="spa" xml:id="mzywsucqag_spa" corresp="#mzywsucqag_eng">
+              <speaker>Ofelia</speaker>
+                <l>Me tomó de la muñeca y me apretó con fuerza.</l>
+                <l>Luego se retiró a toda la extensión de su brazo,</l>
+                <l>y con la otra mano así sobre la frente,</l>
+                <l>se puso a examinar mi rostro</l>
+                <l>como si quisiera dibujarlo. Largo rato permaneció así.</l>
+                <l>Al fin, con un leve sacudimiento de mi brazo,</l>
+                <l>y tres veces moviendo la cabeza arriba y abajo,</l>
+                <l>exhaló un suspiro tan lastimero y profundo</l>
+                <l>que parecía desgarrarle todo el cuerpo</l>
+                <l>y acabar con su ser. Hecho esto, me soltó,</l>
+                <l>y con la cabeza vuelta sobre el hombro</l>
+                <l>parecía encontrar el camino sin ayuda de sus ojos,</l>
+                <l>pues salió de la estancia sin valerse de ellos,</l>
+                <l>y hasta el último instante fijó su mirada en mí.</l>
+            </sp>
+                                          
+            <sp who="#polonius" xml:lang="eng" xml:id="pxm5t5toma_eng" corresp="#pxm5t5toma_spa">
+              <speaker>Polonius</speaker>
+                <l>
+                  <app>
+                    <lem>Come,</lem>
+                    <rdg wit="#f1" type="variation-abstence"/>
+                  </app> 
+                go with me. I will go seek the King.</l>
+                <l>This is the very ecstasy of love,</l>
+                <l>Whose violent property fordoes itself</l>
+                <l>And leads the will to desperate undertakings</l>
+                <l>As oft as any passions under heaven</l>
+                <l>That does afflict our natures. I am sorry.</l>
+                <l>What, have you given him any hard words of late?</l>
+            </sp>
+            <sp who="#polonius" xml:lang="spa" xml:id="pxm5t5toma_spa" corresp="#pxm5t5toma_eng">
+              <speaker>Polonio</speaker>
+                <l>Ven, acompáñame. Iré a buscar al rey.</l>
+                <l>Este es el mismo éxtasis del amor,</l>
+                <l>cuyo ímpetu violento se destruye a sí mismo</l>
+                <l>y arrastra la voluntad a empresas desesperadas,</l>
+                <l>tanto como cualquiera de las pasiones bajo el cielo</l>
+                <l>que afligen nuestra naturaleza. Lo lamento.</l>
+                <l>¿Le has hablado con severidad en estos días?</l>
+            </sp>
+                                            
+            <sp who="#ophelia" xml:lang="eng" xml:id="n6uayyyrlx_eng" corresp="#n6uayyyrlx_spa">
+              <speaker>Ophelia</speaker>
+                <l>No, my good lord, but as you did command</l>
+                <l>I did repel his letters, and denied</l>
+                <l>His access to me.</l>
+            </sp>
+            <sp who="#ophelia" xml:lang="spa" xml:id="n6uayyyrlx_spa" corresp="#n6uayyyrlx_eng">
+              <speaker>Ofelia</speaker>
+                <l>No, mi buen señor, sino que, tal como me lo ordenaste</l>
+                <l>rechacé sus cartas y le negué</l>
+                <l>su acceso a mí.</l>
+            </sp>
+                                            
+            <sp who="#polonius" xml:lang="eng" xml:id="ps2att5ge6_eng" corresp="#ps2att5ge6_spa">
+              <speaker>Polonius</speaker>
+                <l>That hath made him mad.</l>
+                <l>I am sorry that with better 
+                  <app>
+                    <lem>heed</lem>
+                    <rdg wit="#f1" type="variation-substance">speed</rdg>
+                  </app>
+                and judgment</l>
+                <l>I had not coted him. I feared he did but trifle</l>
+                <l>And meant to wrack thee; but beshrew my jealousy!</l>
+                <l>
+                  <app>
+                    <lem>By heaven,</lem>
+                    <rdg wit="#f1" type="variation-abstence"/>
+                  </app>  
+                  it 
+                  <app>
+                    <lem n="it"></lem>
+                    <rdg wit="#f1" type="variation-present">seems it</rdg>
+                  </app>
+                  is as proper to our age</l>
+                <l>To cast beyond ourselves in our opinions</l>
+                <l>As it is common for the younger sort</l>
+                <l>To lack discretion. Come, go we to the King.</l>
+                <l>This must be known, which, being kept close, might move</l>
+                <l>More grief to hide than hate to utter love.</l>
+                <l>
+                  <app>
+                    <lem>Come.</lem>
+                    <rdg wit="#f1" type="variation-abstence"/>
+                  </app> 
+                </l>
+            </sp>
+            <sp who="#polonius" xml:lang="spa" xml:id="ps2att5ge6_spa" corresp="#ps2att5ge6_eng">
+              <speaker>Polonio</speaker>
+                <l>Eso le ha hecho perder el juicio.</l>
+                <l>Lamento no haberlo considerado con mayor cuidado y juicio.</l>
+                <l>Temí que solo jugara contigo</l>
+                <l>y que quisiera arruinarte; ¡pero maldita sea mi envidia!</l>
+                <l>Por Dios, tan propio es de nuestra vejez</l>
+                <l>excedernos en opiniones,</l>
+                <l>como común es en la juventud</l>
+                <l>carecer de discreción. Ven, vamos a ver al rey.</l>
+                <l>TEsto tiene que darse a conocer, pues guardarlo en silencio traería</l>
+                <l>mayor dolor que el desagrado que pueda provocar hablar del amor.</l>
+                <l>Vamos.</l>
+            </sp>
+                                                
+            <stage xml:lang="eng" xml:id="rkfyq9pshf_eng" corresp="#rkfyq9pshf_spa">
+              Exeunt.
+            </stage>
+            <stage xml:lang="spa" xml:id="rkfyq9pshf_spa" corresp="#rkfyq9pshf_eng">
+               Salen.
+            </stage>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,84 @@
+body{
+    display: block;
+    margin-left: 4ex;
+    font-family: 'Crimson+Text','Times New Roman', Times, serif;
+    font-size: 14pt;
+}
+
+h1 {
+    font-family: 'UnifrakturMaguntia';
+    font-style: normal;
+}
+
+tei-teiheader {
+    display: block;
+    font-family: 'UnifrakturMaguntia';
+    text-align: center;
+    color: rgba(29, 155, 161, 0.671);
+}
+
+tei-title{
+    display: block;
+    font-size: 80px;
+}
+
+
+tei-author{
+    display: block;
+    font-size: 40px;
+}
+
+tei-publicationstmt tei-p {
+    color: rgb(72, 159, 52);
+    display: block;
+}
+
+tei-sourcedesc tei-p {
+    color: rgb(86, 24, 98);
+    display: block;
+}
+
+tei-stage{
+    display: block;
+    font-style: italic;
+}
+
+tei-stage[lang="eng"]{
+    color: rgb(229, 113, 122);
+}
+
+tei-stage[lang="spa"]{
+    color: blueviolet;
+}
+
+tei-sp{
+    display: block;
+}
+
+tei-speaker{
+    display: block;
+    font-variant: small-caps;
+    color: burlywood;
+    margin-top: 12pt;
+}
+
+tei-l{
+    display: block;
+}
+
+tei-p{
+    display: block;
+}
+
+tei-role{
+    display: list-item;
+    font-size: 45px;
+    font-weight: 500;
+    font-family: 'Cookie';
+}
+
+tei-roledesc{
+    display: contents;
+    font-size: 30px;
+    font-family: 'Sirivennela';
+}
