@@ -72,13 +72,13 @@ tei-p{
 
 tei-role{
     display: list-item;
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 500;
     font-family: 'Cookie';
 }
 
 tei-roledesc{
-    display: contents;
-    font-size: 30px;
+    display: block;
+    font-size: 25px;
     font-family: 'Sirivennela';
 }
