@@ -2,7 +2,7 @@ body{
     display: block;
     margin-left: 4ex;
     font-family: 'Crimson+Text','Times New Roman', Times, serif;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 h1 {
@@ -35,7 +35,7 @@ tei-publicationstmt tei-p {
 
 tei-sourcedesc tei-p {
     color: rgb(86, 24, 98);
-    display: block;
+    display:block;
 }
 
 tei-stage{
@@ -58,8 +58,10 @@ tei-sp{
 tei-speaker{
     display: block;
     font-variant: small-caps;
-    color: burlywood;
+    color: rgb(4, 88, 50);
     margin-top: 12pt;
+    font-weight: 500;
+    font-family: 'Cookie'
 }
 
 tei-l{
@@ -71,7 +73,7 @@ tei-p{
 }
 
 tei-role{
-    display: inline;
+    display:block;
     font-size: 30px;
     font-weight: 500;
     font-family: 'Cookie';
@@ -81,4 +83,57 @@ tei-roledesc{
     display: block;
     font-size: 25px;
     font-family: 'Sirivennela';
+}
+tei-lem{
+    display: inline;
+    font-style: italic;
+    color: rgba(106, 58, 3, 0.979);
+}
+
+tei-lem::after{
+    content: "(" attr(wit) ")";
+    vertical-align: sub;
+    font-size: 6pt;
+}
+
+tei-lem[n]::after{
+    content: "0 (" attr(wit) ")";
+    color: black;
+    font-weight: 600;
+}
+
+tei-rdg {
+    display: inline;
+    color: rgb(14, 61, 62);
+    font-style:italic;
+}
+
+tei-rdg::after{
+    content: "(" attr(wit) ")";
+    vertical-align: sub;
+    font-size: 6pt;
+}
+tei-rdg[type=variation-absent]::after {
+content: "0 (" attr(wit) ")";
+vertical-align: sub;
+    font-size: 6pt;
+}
+
+tei-rdg[type=variation-present]::before {
+content: "^";
+vertical-align: sub;
+    font-size: 6pt;
+}
+
+tei-rdg[type=variation-present]::after {
+content: "(" attr(wit) ")";
+vertical-align: sub;
+    font-size: 6pt;
+}
+
+tei-div[type=reflexion]{
+    font-family: 'cookie';
+    display: block;
+    font-size: larger;
+    text-indent: 1.5cm;
 }
